@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.health_care"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="33" />
+
+    <permission
+        android:name="com.example.health_care.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.health_care.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.Health_Care" >
+        <activity
+            android:name="com.example.health_care.HealthArticlesDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.HealthArticlesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.BuyMedicineBookActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.CartBuyMedicineActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.BuyMedicineDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.BuyMedicineActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.OrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.LabTestBookActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.CartLabActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.LabTestDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.LabTestActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.BookAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.DoctorDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.FindDoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.health_care.LoginActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.health_care.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>
